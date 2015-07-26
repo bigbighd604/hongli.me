@@ -25,4 +25,8 @@ cd $DIR
 
 # Create logs folder, otherwise nginx start will fail.
 mkdir -p logs
+
+# Change nginx default prefix directory to 'www', it's not necessary
+# to specify '-c conf/nginx.conf', nginx will search for 'conf/nginx.conf'
+# under prefix directory.
 $NGINX -p "$DIR"
