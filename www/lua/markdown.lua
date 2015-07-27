@@ -11,6 +11,7 @@ if discount == nil then
 end
 
 --local path = string.sub(ngx.var.uri, 2)
+-- ngx.var.path is a group regex matching in nginx.conf
 local path = ngx.var.path
 local file_path = path .. ".md"
 --local cur_dir = (...):match("(.+)%.[^%.]+$")
